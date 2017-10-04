@@ -6,7 +6,7 @@ export default (types) => {
       clone.splice(state.pending.indexOf(item), 1)
 
       state.pending = clone
-      state.succeeded[payload.id] = item
+      state.succeeded[payload.id] = payload
     }
   }
 }

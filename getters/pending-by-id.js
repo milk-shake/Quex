@@ -1,1 +1,3 @@
-export default (state) => id => state.pending[id]
+export default (state) => id => {
+  return state.pending.find(item => item.id === id)
+}

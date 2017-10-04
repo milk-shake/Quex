@@ -9,8 +9,11 @@ export default (types) => ({ commit, state, dispatch, rootState, rootGetters }, 
 
       if (!state.processing) {
         dispatch('process')
+          .then((resolved) => {
+            console.log('resolved', resolved)
+            resolve(resolved[id])
+          })
       }
     }
-    resolve(id)
   })
 }
